@@ -10,7 +10,9 @@ package com.ytjh.comp
 	 */
 	public class YTWnd extends WmWnd 
 	{
-		
+		/**
+		 * eg:addChild(new YTWnd());
+		 */
 		public function YTWnd(title:String="YTJH窗口", w:int=480, h:int=360) 
 		{
 			super(title, w, h);
@@ -25,8 +27,6 @@ package com.ytjh.comp
 		override protected function initWnd():void 
 		{
 			super.initWnd();
-			
-			
 		}
 		
 		override protected function initCloseBtn():void 

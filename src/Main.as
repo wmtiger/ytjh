@@ -2,6 +2,7 @@ package
 {
 	import com.wm.mgr.WmCompMgr;
 	import com.ytjh.assets.YTAssets;
+	import com.ytjh.views.login.LoginWnd;
 	import flash.display.Sprite;
 	import flash.events.Event;
 	
@@ -24,8 +25,11 @@ package
 			// entry point
 			WmCompMgr.instance.init(stage);
 			WmCompMgr.instance.addAsset("ytjh", new YTAssets());
-			var wnd3:TestYtjhWnd = new TestYtjhWnd("测试", 540, 420);
-			addChild(wnd3);
+			
+			var wnd:LoginWnd = new LoginWnd();
+			addChild(wnd);
+			wnd.x = stage.stageWidth - wnd.compWidth >> 1;
+			wnd.y = stage.stageHeight - wnd.compHeight >> 1;
 		}
 		
 	}
