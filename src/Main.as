@@ -1,13 +1,15 @@
 package 
 {
 	import com.wm.mgr.WmCompMgr;
+	import com.wm.utils.Log;
 	import com.ytjh.assets.YTAssets;
+	import com.ytjh.net.HttpService;
 	import com.ytjh.views.login.LoginWnd;
 	import flash.display.Sprite;
 	import flash.events.Event;
 	
 	/**
-	 * ytjh主类
+	 * ytjh pc - ui主类
 	 * @author wmtiger
 	 */
 	public class Main extends Sprite 
@@ -23,6 +25,8 @@ package
 		{
 			removeEventListener(Event.ADDED_TO_STAGE, init);
 			// entry point
+			Log.init(stage);
+			HttpService.instance.init("http://ytjh.f3322.org:8088/", "/root/");
 			WmCompMgr.instance.init(stage);
 			WmCompMgr.instance.addAsset("ytjh", new YTAssets());
 			
