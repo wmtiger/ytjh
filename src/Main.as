@@ -26,7 +26,7 @@ package
 			removeEventListener(Event.ADDED_TO_STAGE, init);
 			// entry point
 			Log.init(stage);
-			HttpService.instance.init("http://ytjh.f3322.org:8088/", "/root/");
+			HttpService.instance.init("http://ytjh.f3322.org:8818/", "/root/");
 			WmCompMgr.instance.init(stage);
 			WmCompMgr.instance.addAsset("ytjh", new YTAssets());
 			
